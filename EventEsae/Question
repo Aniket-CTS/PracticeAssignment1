@@ -1,0 +1,73 @@
+/*EventEase is a popular online event ticketing platform. They want to calculate ticket selling revenue for organizers and ticket buying cost for attendees based on participant type. Help them automate this.
+Functional Requirements
+Class: ParticipantInfo
+Attributes: String participantId, String name, String email, long phoneNumber
+Methods: Getters and setters for all attributes and a parameterized constructor with four arguments in the following order — participantId, name, email, phoneNumber — are provided in the code skeleton.
+Parameters: Nil
+Responsibilities: Nil
+
+
+Class: Organizer
+Attribute: int ticketsAvailable
+Methods: Getter and setter for the attribute are provided in the code skeleton.
+Parameters: Nil
+Responsibilities: Include a public 5-argument constructor in the order — participantId, name, email, phoneNumber, ticketsAvailable.
+
+
+Class: Organizer
+Attribute: Nil
+Methods: Include the method calculateSellingRevenue
+Parameters: int ticketsToSell, double pricePerTicket
+Responsibilities: Calculate revenue as ticketsToSell * pricePerTicket.
+Constraint: If ticketsToSell is more than ticketsAvailable, return -1.
+Return: double (calculated revenue)
+
+
+Class: Attendee
+Attribute: double walletBalance
+Methods: Getter and setter for the attribute are provided in the code skeleton.
+Parameters: Nil
+Responsibilities: Include a public 5-argument constructor in the order — participantId, name, email, phoneNumber, walletBalance.
+
+
+Class: Attendee
+Attribute: Nil
+Methods: Include the method calculateBuyingCost
+Parameters: int ticketsToBuy, double pricePerTicket
+Responsibilities: Calculate cost as ticketsToBuy * pricePerTicket.
+Constraint: If calculated cost is more than walletBalance, return -1.
+Return: double (calculated cost)
+
+
+Notes
+Organizer and Attendee are child classes of ParticipantInfo.
+Edit only the Organizer and Attendee classes to implement business requirements.
+Assume all input values are valid.
+Methods and constructors should be public.
+Attributes of the parent class should be protected; attributes of the child classes should be private.
+Do not use System.exit(0).
+Input Format
+Organizer —
+ Organizer:<participantId>:<name>:<email>:<phoneNumber>:<ticketsAvailable>:<ticketsToSell>:<pricePerTicket>
+Attendee —
+ Attendee:<participantId>:<name>:<email>:<phoneNumber>:<walletBalance>:<ticketsToBuy>:<pricePerTicket>
+Sample Input/Output 1
+Enter the participant details
+Organizer:ORG01:Alice:alice@example.com:9876543210:50:12:800
+Calculated ticket selling revenue is 9600.0
+ 
+Sample Input/Output 2
+Enter the participant details
+Attendee:ATT01:Bob:bob@example.com:9123456780:5000:3:1200
+Calculated ticket buying cost is 3600.0
+ 
+Sample Input/Output 3
+Enter the participant details
+Organizer:ORG02:Ella:ella@example.com:7894561230:4:8:1500
+Not enough tickets to sell!
+ 
+Sample Input/Output 4
+Enter the participant details
+Attendee:ATT02:Ryan:ryan@example.com:9988776655:700:2:600
+Not enough funds to buy tickets!
+*/
